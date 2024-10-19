@@ -1,7 +1,8 @@
 "use client";
-
 import { Inter } from "next/font/google";
 import "./globals.css";
+import 'antd/dist/reset.css'; // Ensure you import Ant Design styles
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +14,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="pt-[72px] px-[15px] lg:px-[100px]">{children}</div>
+        <Navbar />
+        <div className="pt-[20px] px-[15px] lg:px-[100px]">
+          {children}
+        </div>
       </body>
     </html>
   );

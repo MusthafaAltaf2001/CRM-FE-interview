@@ -1,3 +1,23 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Overriding default ant design styles*/
+
+.ant-tabs-nav::before {
+    @apply border-none
+}
+
+.ant-tabs-tab {
+    @apply rounded-lg bg-white border-none font-semibold text-[#667085] !important
+}
+
+.ant-tabs-tab-active {
+    @apply bg-[#EFF8FF] !important
+}
+
+/* End of Overriding default ant design styles*/
+
+
+@import url('antd/dist/reset.css');
